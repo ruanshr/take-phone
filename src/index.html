@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .container .image {
+        flex: 1 0 250px;
+        object-fit: contain;
+        width: 250px;
+      }
+    </style>
+    <script>
+      window.addEventListener("DOMContentLoaded", function() {
+        const images = window.images;
+        if (Array.isArray(images)) {
+          const imageDom = document.createElement("div");
+          images.forEach(imageName => {
+            const img = document.createElement("img")
+            img.setAttribute("class", "image")
+            img.setAttribute("src", `../assets/images/${imageName}`)
+            imageDom.append(img)
+
+          })
+          imageDom.setAttribute("class", "container")
+          document.body.appendChild(imageDom);
+        }
+
+      })
+    </script>
+  </head>
+  <body></body>
+</html>

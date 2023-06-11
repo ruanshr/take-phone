@@ -1,0 +1,12 @@
+{
+  "name": "takephone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "node ./scripts/genImage.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
